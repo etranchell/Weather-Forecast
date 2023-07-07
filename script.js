@@ -2,7 +2,7 @@ const apiKey = '7463aec950d8030240c60a772ae32e7f';
 
 // Function to fetch weather data for a city
 function fetchWeatherData(cityName) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=imperial`;
 
   fetch(apiUrl)
     .then((response) => response.json())
@@ -20,7 +20,7 @@ function fetchWeatherData(cityName) {
 
 // Function to fetch forecast data for a city
 function fetchForecastData(cityName) {
-  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}&units=imperial`;
 
   fetch(apiUrl)
     .then((response) => response.json())
