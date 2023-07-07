@@ -2,94 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <h1>Weather Dashboard</h1>
+        <form id="searchForm">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button type="submit">Search</button>
+        </form>
     </header>
+
     <main>
-        <section class="container1">
-            <section class="container2">
-                <h2>Search for a City:</h2>
-                <input type="text" placeholder="City Name" class="cityInput" />
-                <button class="searchButton">Search</button>
-                <p class="feedBackText"></p>
-                <hr />
-            </section>
-            <section class="container3">
-                <section class="current-container">
-                    <div class="iconWrapper">
-                        <h3 class="current current-city"></h3>
-                        <img class="currentIconImage" src="#" alt="icon">
-                    </div>
-                    <p class="current current-temp">&deg;</p>
-                    <p class="current current-wind"></p>
-                    <p class="current current-humidity"></p>
-                </section>
-            </section>
+        <section id="currentWeather">
+            <!-- Current weather data will be dynamically inserted here -->
         </section>
-        <section class="container4">
-            <section class="container5">
-            </section>
-            <section class="container6">
-                <h3>5-Day Forecast:</h3>
-                <section class="five-day-forecast">
-                    <section class="day">
-                        <div class="daymodifier">
-                            <h4 class="Date"></h4>
-                            <img class="fiveDayIcon" scr="#" alt="icon" />
-                            <p class="Temp"></p>
-                            <p class="Wind"></p>
-                            <p class="Humidity"></p>
-                        </div>
-                    </section>
-                    <section class="day">
-                        <div class="daymodifier">
-                            <h4 class="Date"></h4>
-                            <img class="fiveDayIcon" scr="#" alt="icon" />
-                            <p class="Temp"></p>
-                            <p class="Wind"></p>
-                            <p class="Humidity"></p>
-                        </div>
-                    </section>
-                    <section class="day">
-                        <div class="daymodifier">
-                            <h4 class="Date"></h4>
-                            <img class="fiveDayIcon" scr="#" alt="icon" />
-                            <p class="Temp"></p>
-                            <p class="Wind"></p>
-                            <p class="Humidity"></p>
-                        </div>
-                        </div>
-                    </section>
-                    <section class="day">
-                        <div class="daymodifier">
-                            <h4 class="Date"></h4>
-                            <img class="fiveDayIcon" scr="#" alt="icon" />
-                            <p class="Temp"></p>
-                            <p class="Wind"></p>
-                            <p class="Humidity"></p>
-                        </div>
-                    </section>
-                    <section class="day">
-                        <div class="daymodifier">
-                            <h4 class="Date"></h4>
-                            <img class="fiveDayIcon" scr="#" alt="icon" />
-                            <p class="Temp"></p>
-                            <p class="Wind"></p>
-                            <p class="Humidity"></p>
-                        </div>
-                    </section>
-                </section>
-            </section>
+
+        <section id="forecast">
+            <!-- Forecast data will be dynamically inserted here -->
+        </section>
+
+        <section id="searchHistory">
+            <!-- Search history will be dynamically inserted here -->
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 
