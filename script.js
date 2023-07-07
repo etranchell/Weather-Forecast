@@ -33,3 +33,46 @@ function fetchForecastData(cityName) {
       console.log('Error:', error);
     });
 }
+
+// Function to display current weather data
+function displayCurrentWeather(data) {
+  const currentWeatherContainer = document.getElementById('currentWeather');
+  currentWeatherContainer.innerHTML = '';
+
+  const temperature = data.main.temp;
+  const humidity = data.main.humidity;
+  const windSpeed = data.wind.speed;
+  const weatherIcon = data.weather[0].icon;
+
+  // Create HTML elements for current weather data
+  const temperatureElement = document.createElement('p');
+  temperatureElement.textContent = `Temperature: ${temperature}°F`;
+
+  const humidityElement = document.createElement('p');
+  humidityElement.textContent = `Humidity: ${humidity}%`;
+
+  const windSpeedElement = document.createElement('p');
+  windSpeedElement.textContent = `Wind Speed: ${windSpeed} mph`;
+
+  const weatherIconElement = document.createElement('img');
+  weatherIconElement.src = `http://openweathermap.org/img/w/${weatherIcon}.png`;
+  weatherIconElement.alt = 'Weather Icon';
+
+  // Append elements to the container
+  currentWeatherContainer.appendChild(temperatureElement);
+  currentWeatherContainer.appendChild(humidityElement);
+  currentWeatherContainer.appendChild(windSpeedElement);
+  currentWeatherContainer.appendChild(weatherIconElement);
+}
+
+const searchForm = document.getElementById('searchForm');
+
+searchForm.addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent form submission from refreshing the page
+
+  const cityInput = document.getElementById('cityInput');
+  const city = cityInput.value;
+
+  // Call the fetchWeatherData function with the entered city
+  fetchWeatherData(city);
+});
