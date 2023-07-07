@@ -9,7 +9,7 @@ function fetchWeatherData(cityName) {
     .then((data) => {
       // Process and display current weather data
       displayCurrentWeather(data);
-console.log(data);
+      console.log(data);
       // Fetch and display forecast data
       fetchForecastData(cityName);
     })
@@ -18,3 +18,18 @@ console.log(data);
     });
 }
 
+// Function to fetch forecast data for a city
+function fetchForecastData(cityName) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
+
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      // Process and display forecast data
+      console.log(data);
+      displayForecast(data.list);
+    })
+    .catch((error) => {
+      console.log('Error:', error);
+    });
+}
