@@ -10,13 +10,13 @@ I learned about server side APIs.
 
 ## Installation
 
-Deployed through Heroku at 
+Deployed through Netlify at 
 
 ## Usage
 
-Go to the website at     . Then search for the city that you want to know the current weather as well as forecast.  The search results will show both in a easy to read table.
+Go to the website at     . Then search for the city that you want to know the current weather of, as well as the forecast.  The search results will show both in a easy to read table.
 
-Screen shot of website showing search results activetly deployed on Heroku. 
+Screen shot of website showing search results activetly deployed on Netlify. 
 
 
 
